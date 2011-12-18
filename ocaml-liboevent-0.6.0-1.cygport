@@ -1,0 +1,12 @@
+ORIG_PN="ocaml-event"
+inherit ocaml
+
+DESCRIPTION="OCaml libevent bindings"
+HOMEPAGE="http://mmzeeman.home.xs4all.nl/ocaml/"
+SRC_URI="http://mmzeeman.home.xs4all.nl/ocaml/${ORIG_PN}-${PV}.tar.gz"
+
+src_compile() {
+	lndirs
+	cd ${B}
+	cygmake all allopt
+}
