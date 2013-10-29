@@ -2,7 +2,7 @@ inherit ocaml
 
 NAME="ocaml-liboevent"
 VERSION=0.6.0
-RELEASE=1
+RELEASE=2
 CATEGORY="Libs"
 SUMMARY="OCaml libevent bindings"
 DESCRIPTION="An ocaml wrapper for the libevent API. The libevent API provides
@@ -12,6 +12,7 @@ support callbacks due to signals or regular timeouts."
 HOMEPAGE="http://mmzeeman.home.xs4all.nl/ocaml/"
 SRC_URI="http://mmzeeman.home.xs4all.nl/ocaml/ocaml-event-${VERSION}.tar.gz"
 SRC_DIR="ocaml-event-${VERSION}"
+PATCH_URI="0.6.0-static.patch"
 
 src_compile() {
 	lndirs

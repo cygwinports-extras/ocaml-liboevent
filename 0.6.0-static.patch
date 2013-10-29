@@ -1,0 +1,11 @@
+--- origsrc/ocaml-event-0.6.0/Makefile	2005-03-13 08:00:29.000000000 -0600
++++ src/ocaml-event-0.6.0/Makefile	2013-10-29 00:01:22.860590500 -0500
+@@ -51,7 +51,7 @@ $(XARCHIVE): $(CARCHIVE) $(XOBJECTS)
+ install: all
+ 	{ test ! -f $(XARCHIVE) || extra="$(XARCHIVE) $(NAME).a"; }; \
+ 	$(OCAMLFIND) install $(NAME) META $(NAME).cmi $(NAME).mli $(ARCHIVE) \
+-	dll$(CARCHIVE_NAME).so lib$(CARCHIVE_NAME).a $$extra
++	lib$(CARCHIVE_NAME).a $$extra -optional dll$(CARCHIVE_NAME).so
+ 
+ .PHONY: uninstall
+ uninstall:
